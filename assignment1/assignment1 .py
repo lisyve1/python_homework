@@ -1,10 +1,10 @@
-print("hello world") # this is my code in python.
-
+print("hello!") # this is my code in python.
+##########################################################################
 def greet(name):
     return f"Hello, {name}!"
 print(greet("Lissette"))
 
-
+############################################################################
 
 def calc(x, y, operation="multiply"):
     try:
@@ -19,7 +19,7 @@ def calc(x, y, operation="multiply"):
             case _: return "Invalid operation"
 
     except ZeroDivisionError:
-        return "cant divide by zero!"
+        return "cant divide by 0!"
     except TypeError:
         return "can't multiply those values!"
 
@@ -33,29 +33,6 @@ print(calc(5, 0, "power"))
 print(calc(5, 0, "invalid"))
 #############################################################################
 
-def data_type_conversion(value, type):
-    try:
-        if type == "int":
-            return int(value)
-        elif type == "float":
-            return float(value)
-        elif type == "str":
-            return str(value)
-        else:
-            return f"You can't convert {value} into a {type}."
-    except:
-        return f"You can't convert {value} into a {type}."
-
-
-print(data_type_conversion("123", "int"))        # 123
-print(data_type_conversion("123.45", "float"))   # 123.45
-print(data_type_conversion("True", "bool"))      # True
-print(data_type_conversion("abc", "int"))        # can't convert abc into a int."
-print(data_type_conversion("123", "list"))       #  can't convert 123 into a list."
-
-
-################################################################################################
-
 def data_type_conversion(value, data_type):
     try:
         if data_type == "int":
@@ -65,9 +42,20 @@ def data_type_conversion(value, data_type):
         elif data_type == "str":
             return str(value)
         else:
-            return f"You can't convert {value} into a {data_type}."
+            return value  # For unsupported types, return the original value
     except (ValueError, TypeError):
         return f"You can't convert {value} into a {data_type}."
+
+
+print(data_type_conversion("123", "int"))
+print(data_type_conversion("123.45", "float"))
+print(data_type_conversion("True", "str"))
+print(data_type_conversion("abc", "int"))
+print(data_type_conversion("123", "list"))
+
+
+################################################################################################
+
 
 
 ######################################################################################################
