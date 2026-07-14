@@ -1,6 +1,7 @@
 import csv
 import os
 import traceback
+from datetime import datetime
 
 
 # Task 1: Diary Program
@@ -43,7 +44,7 @@ def read_employees():
     employees = {}
     rows = []
     try:
-        with open("../csv/employees.csv", "r", newline="") as file:
+        with open("minutes.csv", "r", newline="") as file:
             reader = csv.reader(file)
             first = True
             for row in reader:
@@ -158,9 +159,9 @@ def get_this_value():
 # ---------------------------------------------------------------------------
 # Task 11: Creating Your Own Module
 # ---------------------------------------------------------------------------
+import assignment2 # type: ignore
 def set_that_secret(new_secret):
     assignment2.custom_module.set_secret(new_secret)
-
 
 set_that_secret("open sesame")
 print(assignment2.custom_module.secret)
