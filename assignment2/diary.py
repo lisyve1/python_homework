@@ -44,7 +44,7 @@ def read_employees():
     employees = {}
     rows = []
     try:
-        with open("minutes.csv", "r", newline="") as file:
+        with open("employees.csv", "r", newline="") as file:
             reader = csv.reader(file)
             first = True
             for row in reader:
