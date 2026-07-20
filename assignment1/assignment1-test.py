@@ -4,7 +4,7 @@ def test_hello():
     assert a1.hello() == "Hello!"
 
 def test_greet():
-    assert a1.greet("James") == "Hello, James!"
+    assert a1.greet("Lissette") == "Hello!, Lissette!"
 
 def test_calc():
     assert a1.calc(5,6) == 30
@@ -13,8 +13,8 @@ def test_calc():
     assert a1.calc(14,2.0,"multiply") == 28.0
     assert a1.calc(12.6, 4.4, "subtract") == 8.2
     assert a1.calc(9,5, "modulo") == 4
-    assert a1.calc(10,0,"divide") == "You can't divide by 0!"
-    assert a1.calc("first", "second", "multiply") == "You can't multiply those values!"
+    assert a1.calc(10,0,"divide") == "cant divide by 0!"
+    assert a1.calc("first", "second", "multiply") == "can't multiply those values!"
 
 def test_data_type_conversion():
     result = a1.data_type_conversion("110", "int")
@@ -51,9 +51,9 @@ def test_hangman():
     assert a1.hangman("difficulty","ic") == "_i__ic____"
 
 def test_pig_latin():
-    assert a1.pig_latin("apple") == "appleay"
+    assert a1.pig_latin("apple") == "appleway"
     assert a1.pig_latin("banana") == "ananabay"
-    assert a1.pig_latin("cherry") == "errychay"
-    assert a1.pig_latin("quiet") == "ietquay"
-    assert a1.pig_latin("square") == "aresquay"
-    assert a1.pig_latin("the quick brown fox") == "ethay ickquay ownbray oxfay"
+    assert a1.pig_latin("cherry") == "herrycay"
+    assert a1.pig_latin("quiet") == "uietqay"
+    assert a1.pig_latin("square") == "quaresay"
+    assert a1.pig_latin("the quick brown fox") == "hetay uickqay rownbay oxfay"

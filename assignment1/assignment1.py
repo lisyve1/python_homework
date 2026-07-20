@@ -1,9 +1,11 @@
 print("hello!") # this is my code in python.
 ##########################################################################
 def greet(name):
-    return f"Hello, {name}!"
+    return f"Hello!, {name}!" 
 print(greet("Lissette"))
 
+def hello(): ## This function returns a greeting message.
+    return "Hello!"
 ############################################################################
 
 def calc(x, y, operation="multiply"):
@@ -72,8 +74,8 @@ def grade(*args):
                 return letter
     except:
         return "Invalid data was provided."
-    
-    # Test 
+
+    # Test
 print(grade(95, 88, 92))        # A
 print(grade(85, 82, 88))        # B
 print(grade(75, 72, 78))        # C
